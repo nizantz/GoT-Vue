@@ -1,0 +1,46 @@
+    <div class="card" @click="switchCharacter">
+      <div class="card-image">
+        <figure class="image">
+          <!-- <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image"> -->
+          <div v-if="character.data.imageLink === undefined">
+            <!-- <img class="business-card-pic" src="/src/assets/GoT.jpeg" alt="NA" /> -->
+            <img src="/src/assets/GoT.jpeg" alt="NA" />
+          </div>
+          <div v-else>
+            <img v-bind:src="'https://api.got.show' + character.data.imageLink" alt="NA" />
+          </div>
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">{{character.data.name}}</p>
+          </div>
+        </div>
+
+        <div class="content">
+          <p><i class="fa fa-home"></i>&nbsp;{{character.data.house}}</p>
+          <p v-if="character.data.male">
+            <i class="fa fa-male"></i>&nbsp;Male
+          </p>
+          <p v-else>
+            <i class="fa fa-female"></i>&nbsp;Female
+          </p>
+          <p><i class="fa fa-book"></i>&nbsp;Books
+            <ul>
+              <li v-for="item in character.data.books">
+                {{ item }}
+              </li>
+            </ul>
+          </p>
+          <p><i class="fa fa-user"></i>&nbsp;Titles
+            <ul>
+              <li v-for="item in character.data.titles">
+                {{ item }}
+              </li>
+            </ul>
+          </p>
+          <br>
+        </div>
+      </div>
+    </div>

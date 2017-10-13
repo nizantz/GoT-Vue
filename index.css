@@ -1,0 +1,129 @@
+body{
+  background:linear-gradient(to bottom, #e5e5be,#003973);
+  /*height:200vh;*/
+  font-family: 'Roboto',Helvetica, Arial, sans-serif;;
+}
+#app{
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color:black;
+  margin-top: 60px;
+}
+mygrid{
+  display: flex;
+  flex-direction: row;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+.card{
+  width:485px;
+  margin:10px;
+}
+/** Thanks to salih Demircan !--Forked from https://codepen.io/salihDemircan/pen/aZJZOg **/
+.business-card {
+  border: 2px solid linear-gradient(to right, #ede574, #e1f5c4);
+  border-radius: 10px;
+  width: 650px;
+  height: 310px;
+  background: linear-gradient(to right, #4da0b0, #d39d38);
+  position: relative;
+  border-radius:5px;
+  margin-top: 10px;
+  text-align: left;
+  /*cursor: pointer;*/
+}
+
+.business-card-profile {
+  float: left;
+  background:linear-gradient(to right,  #d39d38,#4da0b0);
+  width: 276px;
+  height: 310px
+}
+
+/* grayscale thanks to http://thenewcode.com/532/Convert-Images-To-Black-And-White-With-CSS */
+
+.business-card-pic {
+  width: 150px;
+  display: block;
+
+  padding: 3px;
+  border-radius: 150px;
+  border: solid 2px #54575f;
+
+  margin: 0 auto;
+  margin-top: 50px;
+	/*filter: grayscale(100%);*/
+}
+
+.business-card-name,.business-card-title {
+  padding-top:15px;
+  line-height: 1px;
+  text-align: center;
+  color: black;
+  font-size: 12px;
+}
+
+.business-card-name {
+  font-weight: bold;
+}
+
+.business-card-title {
+  color: #999999;
+  line-height: 5px;
+  font-size: 16px;
+}
+
+/* arrow thanks to : https://jsfiddle.net/josedvq/3HG6d/ */
+
+.business-card-arrow {
+  width: 0;
+  height: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  overflow: hidden;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 270px;
+}
+
+.business-card-arrow:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -20px;
+  margin-left: -20px;
+
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid linear-gradient(to bottom, #e5e5be,#003973);
+}
+
+/* -----------------
+  Details(right side)
+ ------------------- */
+.business-card-details {
+  float: right;
+  color: black;
+  font-size: 13px;
+  line-height: 20px;
+  width: 330px;
+  height: 283px;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.business-card-details .fa {
+  color: black;
+  width: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}

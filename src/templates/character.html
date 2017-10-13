@@ -1,0 +1,37 @@
+<div class="col" @click="switchCharacter">
+  <div class="business-card clearfix">
+    <div class="business-card-profile">
+      <div v-if="character.data.imageLink === undefined">
+        <img class="business-card-pic" src="/src/assets/GoT.jpeg" alt="NA" />
+      </div>
+      <div v-else>
+        <img class="business-card-pic" v-bind:src="'https://api.got.show' + character.data.imageLink" alt="NA" />
+      </div>
+      <p class="business-card-name">{{character.data.name}}</p>
+    </div>
+    <div class="business-card-arrow"></div>
+    <div class="business-card-details">
+      <p><i class="fa fa-home"></i>{{character.data.house}}</p>
+      <p v-if="character.data.male">
+        <i class="fa fa-male"></i>Male
+      </p>
+      <p v-else >
+        <i class="fa fa-female"></i>Female
+      </p>
+      <p><i class="fa fa-book"></i>Books
+        <ul>
+          <li v-for="item in character.data.books">
+            {{ item }}
+          </li>
+        </ul>
+      </p>
+      <p><i class="fa fa-user"></i>Titles
+        <ul>
+          <li v-for="item in character.data.titles">
+            {{ item }}
+          </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</div>
